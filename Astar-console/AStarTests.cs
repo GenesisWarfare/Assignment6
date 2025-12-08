@@ -50,7 +50,7 @@ public static class AStarTests
     {
         int[,] grid = { { 1 } };
         var start = new Pair(0, 0);
-        var goal  = new Pair(0, 0);
+        var goal = new Pair(0, 0);
 
         var path = AStar.FindPath(grid, start, goal);
 
@@ -69,7 +69,7 @@ public static class AStarTests
         };
 
         var start = new Pair(1, 0);
-        var goal  = new Pair(1, 1);
+        var goal = new Pair(1, 1);
 
         var path = AStar.FindPath(grid, start, goal);
 
@@ -90,7 +90,7 @@ public static class AStarTests
         };
 
         var start = new Pair(1, 0);
-        var goal  = new Pair(0, 1);
+        var goal = new Pair(0, 1);
 
         var path = AStar.FindPath(grid, start, goal);
 
@@ -108,7 +108,7 @@ public static class AStarTests
         };
 
         var start = new Pair(0, 0);
-        var goal  = new Pair(2, 2);
+        var goal = new Pair(2, 2);
 
         var path = AStar.FindPath(grid, start, goal);
 
@@ -125,7 +125,7 @@ public static class AStarTests
         };
 
         var start = new Pair(0, 0);
-        var goal  = new Pair(0, 4);
+        var goal = new Pair(0, 4);
 
         var path = AStar.FindPath(grid, start, goal);
         Assert(path != null, "CheapPath: path not null");
@@ -152,11 +152,11 @@ public static class AStarTests
         int[,] grid = new int[rows, cols];
 
         for (int r = 0; r < rows; r++)
-        for (int c = 0; c < cols; c++)
-            grid[r, c] = 1;
+            for (int c = 0; c < cols; c++)
+                grid[r, c] = 1;
 
         var start = new Pair(0, 0);
-        var goal  = new Pair(rows - 1, cols - 1);
+        var goal = new Pair(rows - 1, cols - 1);
 
         var path = AStar.FindPath(grid, start, goal);
 
@@ -176,12 +176,12 @@ public static class AStarTests
         };
 
         var startOut = new Pair(-1, 0);
-        var goalIn   = new Pair(0, 1);
+        var goalIn = new Pair(0, 1);
         Assert(AStar.FindPath(grid, startOut, goalIn) == null,
                "OutOfBounds: start outside grid");
 
-        var startIn  = new Pair(0, 0);
-        var goalOut  = new Pair(2, 2);
+        var startIn = new Pair(0, 0);
+        var goalOut = new Pair(2, 2);
         Assert(AStar.FindPath(grid, startIn, goalOut) == null,
                "OutOfBounds: goal outside grid");
     }
@@ -194,11 +194,11 @@ public static class AStarTests
         int[,] grid = new int[rows, cols];
 
         for (int r = 0; r < rows; r++)
-        for (int c = 0; c < cols; c++)
-            grid[r, c] = 1;
+            for (int c = 0; c < cols; c++)
+                grid[r, c] = 1;
 
         var start = new Pair(0, 0);
-        var goal  = new Pair(rows - 1, cols - 1);
+        var goal = new Pair(rows - 1, cols - 1);
 
         var path = AStar.FindPath(grid, start, goal);
 
@@ -216,11 +216,11 @@ public static class AStarTests
         int[,] grid = new int[rows, cols];
 
         for (int r = 0; r < rows; r++)
-        for (int c = 0; c < cols; c++)
-            grid[r, c] = 1;
+            for (int c = 0; c < cols; c++)
+                grid[r, c] = 1;
 
         int wallCol = 15;
-        int gapRow  = rows / 2;
+        int gapRow = rows / 2;
 
         for (int r = 0; r < rows; r++)
         {
@@ -229,7 +229,7 @@ public static class AStarTests
         }
 
         var start = new Pair(0, 0);
-        var goal  = new Pair(rows - 1, cols - 1);
+        var goal = new Pair(rows - 1, cols - 1);
 
         var path = AStar.FindPath(grid, start, goal);
 
@@ -258,7 +258,7 @@ public static class AStarTests
         };
 
         var start = new Pair(0, 0);
-        var goal  = new Pair(9, 9);
+        var goal = new Pair(9, 9);
 
         var path = AStar.FindPath(grid, start, goal);
 

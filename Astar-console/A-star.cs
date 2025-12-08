@@ -42,14 +42,14 @@ public class AStar
             return null;
         }
 
-        var open     = new PriorityQueue<Pair>();
+        var open = new PriorityQueue<Pair>();
         var cameFrom = new Dictionary<Pair, Pair>();
-        var gScore   = new Dictionary<Pair, float>();
-        var fScore   = new Dictionary<Pair, float>();
-        var closed   = new HashSet<Pair>();
+        var gScore = new Dictionary<Pair, float>();
+        var fScore = new Dictionary<Pair, float>();
+        var closed = new HashSet<Pair>();
 
         Pair startP = start;
-        Pair goalP  = goal;
+        Pair goalP = goal;
 
         gScore[startP] = 0f;
         fScore[startP] = Heuristic(startP, goalP);
@@ -87,7 +87,7 @@ public class AStar
                 if (tentativeG < GetScore(gScore, neighbor))
                 {
                     cameFrom[neighbor] = current;
-                    gScore[neighbor]   = tentativeG;
+                    gScore[neighbor] = tentativeG;
 
                     float f = tentativeG + Heuristic(neighbor, goalP);
                     fScore[neighbor] = f;
@@ -123,9 +123,9 @@ public class AStar
         int r = p.Row;
         int c = p.Col;
 
-        if (r > 0)        yield return new Pair(r - 1, c);
+        if (r > 0) yield return new Pair(r - 1, c);
         if (r < rows - 1) yield return new Pair(r + 1, c);
-        if (c > 0)        yield return new Pair(r, c - 1);
+        if (c > 0) yield return new Pair(r, c - 1);
         if (c < cols - 1) yield return new Pair(r, c + 1);
     }
 
