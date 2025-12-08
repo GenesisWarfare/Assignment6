@@ -10,9 +10,6 @@ Yanai Levy - 215011537
 ## Play the Game  
 Itch.io Link: https://genesiswarfare.itch.io/assignment-6
 
-
-## Game Description  
-
 ## The scene
 We work on the scene Assets/Scenes/5-homework/a-chase
 
