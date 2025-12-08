@@ -13,7 +13,8 @@ Itch.io Link: https://genesiswarfare.itch.io/assignment-6
 
 ## Game Description  
 
-
+## The scene
+We work on the scene in the folder Assets/Scenes/
 
 ## How to Play:  
 
