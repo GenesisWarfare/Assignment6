@@ -22,5 +22,14 @@ How to play: Click on the map to move, the player walks automatically using A* a
 
 ## Features Added for the Assignment  
 
+### Part A
+Boat: When the player picks up the boat, it disappears from the map. After obtaining it, the player is allowed to move on water tiles. 
+Every time the player moves on water, the boat visually reappears under the player (following him).
+
+Goat: When the player picks up the goat, it disappears from the map. After obtaining it, the player is allowed to move on mountain tiles.
+Every time the player walks on a mountain tile, the goat automatically appears with the player, indicating that mountains are now traversable.
+
+### Part B
+
 
 
