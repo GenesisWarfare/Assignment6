@@ -41,13 +41,13 @@ All movement parameters(for all tiles), tile speed (weight), accessibility rules
 This is done using the TileCostManager object in the scene, which has the TileCostConfig script attached to it.
 By editing this object in the Inspector, we can freely adjust tile costs (movement speed), set which tiles require the goat, boat and control all terrain accessibility without modifying any code. A* uses these weights to choose the optimal path, so the player will automatically prefer cheaper and faster terrain.
 
-Unity Implementation:
+**Unity Implementation:**
 
 The A* algorithm is located in:
 Assets/Scripts/6-Astar/AStar.cs
 It works directly with the tilemap, reading each tile's cost through TileCostConfig.
 
-Console and Unit Tests:
+**Console and Unit Tests:**
 
 We also implemented a separate console version of A*, including unit tests, inside the folder Astar-console/
 The console version verifies: correct pathfinding on weighted grids, impossible paths return null, lower-cost routes are preferred even if they are longer in number of steps, obstacles (-1) are treated as non-walkable. This ensures the algorithm works correctly independently of Unity.
